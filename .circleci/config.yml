@@ -3,7 +3,7 @@ executors:
   my-custom-executor1:
     docker:
       - image: cimg/base:stable
-        auth:
+        # auth:
           # ensure you have first added these secrets
           # visit app.circleci.com/settings/project/github/ankitsonihpe/dockerimage/environment-variables
           # username: $DOCKER_HUB_USER
@@ -12,7 +12,7 @@ executors:
     my-custom-executor2:
     docker:
       - image: cimg/base:stable
-        auth:
+        # auth:
           # ensure you have first added these secrets
           # visit app.circleci.com/settings/project/github/ankitsonihpe/dockerimage/environment-variables
           # username: $DOCKER_HUB_USER
