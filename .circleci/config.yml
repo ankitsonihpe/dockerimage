@@ -1,17 +1,17 @@
 version: 2.1
-executors:
-  my-custom-executor1:
-    docker:
-      - image: cimg/base:stable
+# executors:
+  # my-custom-executor1:
+  #   docker:
+  #     - image: cimg/base:stable
         # auth:
           # ensure you have first added these secrets
           # visit app.circleci.com/settings/project/github/ankitsonihpe/dockerimage/environment-variables
           # username: $DOCKER_HUB_USER
           # password: $DOCKER_HUB_PASSWORD
 
-    my-custom-executor2:
-    docker:
-      - image: cimg/base:stable
+    # my-custom-executor2:
+    # docker:
+    #   - image: cimg/base:stable
         # auth:
           # ensure you have first added these secrets
           # visit app.circleci.com/settings/project/github/ankitsonihpe/dockerimage/environment-variables
@@ -21,13 +21,13 @@ jobs:
   setterJob:
     environment:
       TESTVAR2: THIS IS TEST VARIABLE 2
-    executor: my-custom-executor1
+    # executor: my-custom-executor1
     steps:
       - checkout
       - run: echo ${TESTVAR2}
 
   getterJob:
-    executor: my-custom-executor2
+    # executor: my-custom-executor2
     setps:
       - checkout
       - run: echo ${TESTVAR2}
