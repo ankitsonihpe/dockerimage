@@ -17,9 +17,17 @@ jobs:
       - checkout
       - run: echo ${TESTVAR2}
 
+  my-job-name1:    
+    executor: my-custom-executor
+    steps:
+      - checkout
+      - run: echo ${TESTVAR2}
+
 
 
 workflows:
   my-custom-workflow:
     jobs:
       - my-job-name
+      - my-job-name1:
+        requires: ['my-job-name']
