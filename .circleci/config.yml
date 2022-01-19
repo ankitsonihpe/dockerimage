@@ -29,5 +29,4 @@ workflows:
   my-custom-workflow:
     jobs:
       - my-job-name
-      - my-job-name1:
-        requires: ['my-job-name']
+      - my-job-name1
