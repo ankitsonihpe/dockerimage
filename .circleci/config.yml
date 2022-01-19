@@ -38,5 +38,6 @@ workflows:
   my-custom-workflow:
     jobs:
       - setterJob
-      - getterJob
-        requires: ['setterJob']
+      - getterJob:
+          requires:
+            - setterJob
